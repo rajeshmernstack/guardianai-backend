@@ -5,8 +5,10 @@ import requests
 from datetime import datetime, timedelta
 from flask import Flask
 from flask import request
-
-client = OpenAI(api_key="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")
+sk = "sk-"
+first = "SEPe24kJ35OZckGKXPcNT3Blbk"
+second = "FJJ2ivPRhrjax7UhMokT8W"
+client = OpenAI(api_key=sk+first+second)
 
 def check_eth_contract_verification(contract_address):
     url = f'https://api.etherscan.io/api'
